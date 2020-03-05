@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={frontPage}></Route>
+          <Route exact path="/account/signIn" component={frontPage}></Route>
+          <Route exact path="/account/createAccount" component={null}></Route>
+          <Route exact path="/account/passwordForgot" component={null}></Route>
           {/* <Route exact path="/" component={Home}></Route>
             <Route exact path="/badges" component={Badges}></Route>
             <Route exact path="/badges/new" component={BadgeNew}></Route>
