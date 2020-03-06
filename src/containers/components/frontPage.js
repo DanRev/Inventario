@@ -9,25 +9,27 @@ const styles = theme => ({
   container: {
     display: "grid",
     gridTemplateColumns: "20% 60% 20%",
-    gridTemplateRows: "30% 20% 20%",
+    gridTemplateRows: "20% 20% 20%",
     height: "100vh",
     "@media (max-width: 400px)": {
       gridTemplateColumns: "10% 80% 10%",
-      gridTemplateRows: "15% 30% 20%"
+      gridTemplateRows: "15% 30% 20%",
+      height: "90vh"
     }
   },
   signIn: {
-    // marginTop: "10%",
-    // marginBottom: "10%",
     border: "1px solid #DADCE0",
     borderRadius: "5px",
-    width: "55%",
-    height: "100%",
+    width: "30%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexFlow: "column",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    "@media (max-width: 400px)": {
+      width: "100%",
+      marginTop: "75px"
+    }
   },
   containerOrganization: {
     display: "flex",
@@ -60,8 +62,10 @@ const styles = theme => ({
   containerProps: {
     width: "23vw",
     textAlign: "end",
+    marginRight: "220px",
     "@media (max-width: 400px)": {
-      width: "65vw"
+      width: "65vw",
+      marginRight: "-8px"
     }
   },
   margin: {
@@ -71,7 +75,11 @@ const styles = theme => ({
     width: "100%",
     display: "flex",
     justifyContent: "flex-end",
-    marginRight: "90px"
+    marginRight: "122px",
+    marginBottom: "15px",
+    "@media (max-width: 400px)": {
+      marginRight: "45px"
+    }
   }
 });
 
@@ -158,6 +166,7 @@ class frontPage extends Component {
                   id="inputPass"
                   className={classes.inputUser}
                   startAdornment={<Lock className={classes.iconLock} />}
+                  type="password"
                 />
               </FormControl>
               <div className={classes.containerProps}>
